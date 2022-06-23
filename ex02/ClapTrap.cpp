@@ -6,13 +6,16 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 09:59:18 by jroth             #+#    #+#             */
-/*   Updated: 2022/06/23 18:48:34 by jroth            ###   ########.fr       */
+/*   Updated: 2022/06/23 19:51:57 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(): name("NoName") {
+    this->setAttackPoints(0);
+    this->setHitPoints(10);
+    this->setEnergyPoints(10);
     std::cout << "ClapTrap constructor was called" << std::endl;
 }
 
@@ -77,7 +80,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 
 void ClapTrap::beRepaired(unsigned int amount) {
     if (this->getHitPoints() > 0) {
-        this->energyPoints--;
+        this->setEnergyPoints(this->getEnergyPoints() - 1);
         this->setHitPoints(this->getHitPoints() + amount);
         std::cout << "ClapTrap " << this->getName() << " repaired itself for " << amount << " points. " << std::endl;
     }

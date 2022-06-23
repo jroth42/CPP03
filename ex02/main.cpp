@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/06/23 18:49:28 by jroth            ###   ########.fr       */
+/*   Updated: 2022/06/23 21:24:46 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@ int main() {
     frgtrp.attack("Flo");
     printinfo(frgtrp);
     frgtrp.beRepaired(10);
+    frgtrp.takeDamage(2000);
     printinfo(frgtrp);   
+    printinfo(scvtrp);
 
     return 0;
 }

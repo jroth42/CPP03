@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 09:59:18 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/06 21:02:07 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/06 21:30:47 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ ClapTrap::ClapTrap(): name("NoName") {
 }
 
 ClapTrap::ClapTrap(std::string& name):  name(name),
-                                        attackPoints(0),
                                         hitPoints(10),
-                                        energyPoints(10) {
+                                        energyPoints(10),
+                                        attackPoints(0) {
     std::cout << "ClapTrap constructor was called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &clptrp): name(clptrp.name),
                                             hitPoints(clptrp.hitPoints),
-                                            attackPoints(clptrp.attackPoints),
-                                            energyPoints(clptrp.energyPoints) {
+                                            energyPoints(clptrp.energyPoints),
+                                            attackPoints(clptrp.attackPoints) {
     std::cout << "ClapTrap copy constructor was called" << std::endl;
 }
 
@@ -95,7 +95,7 @@ void ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void ClapTrap::beRepaired(unsigned int amount) {
-    if (this->getHitPoints() > 0) {
+    if (this->getHitPoints() > 0 && this->energyPoints > 0) {
         this->energyPoints--;
         this->setHitPoints(this->getHitPoints() + amount);
         std::cout << "ClapTrap " << this->getName() << " repaired itself for " << amount << " points. " << std::endl;

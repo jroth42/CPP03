@@ -6,7 +6,7 @@
 #    By: jroth <jroth@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/20 11:33:54 by jroth             #+#    #+#              #
-#    Updated: 2022/06/28 18:27:21 by jroth            ###   ########.fr        #
+#    Updated: 2022/07/06 21:06:41 by jroth            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,8 @@ NAME = clapTrap
 SRC = ClapTrap.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
+
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 $(NAME): $(OBJ)
 	c++ $(FLAGS) -o $(NAME) $(OBJ)

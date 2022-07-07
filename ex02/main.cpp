@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 10:59:16 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:07:23 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,20 @@ void    printinfo(ClapTrap &clptrp) {
 int main() {
     std::string s1 = "Dewie";
     
-    // ScavTrap scvtrp;
+    ScavTrap scvtrp;
     FragTrap frgtrp(s1);
     FragTrap frgtrp2;
 
     frgtrp2 = frgtrp;
-    // printinfo(frgtrp2);
-    // frgtrp.highFivesGuys();
-    // frgtrp.attack("Flo");
-    // printinfo(frgtrp);
-    // frgtrp.beRepaired(10);
-    // frgtrp.takeDamage(2000);
-    // printinfo(frgtrp);   
-    // printinfo(scvtrp);
+    printinfo(frgtrp2);
+    frgtrp.highFivesGuys();
+    frgtrp.attack("Flo");
+    printinfo(frgtrp);
+    frgtrp.beRepaired(10);
+    frgtrp.takeDamage(2000);
+    frgtrp.beRepaired(2);
+    printinfo(frgtrp);   
+    printinfo(scvtrp);
 
     return 0;
 }

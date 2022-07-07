@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 17:15:35 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:14:19 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,60 +20,42 @@ void    printinfo(ClapTrap &clptrp) {
 }
 
 int main() {
-    // std::string s1 = "Dewie";
-    
-    // DiamondTrap dmnd(s1);
-    // dmnd.whoAmI();
-    // dmnd.takeDamage(40);
-    // dmnd.beRepaired(20);
-    // printinfo(dmnd);
-    // dmnd.whoAmI();
-    // dmnd.whoAmI();
-    // printinfo(dmnd);
-    // DiamondTrap dmnd2;
-    // DiamondTrap dmnd3
-    // printinfo(frgtrp2);
-    // frgtrp.highFivesGuys();
-    // frgtrp.attack("Flo");
-    // printinfo(frgtrp);
-    // frgtrp.beRepaired(10);
-    // frgtrp.takeDamage(2000);
-    // printinfo(frgtrp);   
-    // printinfo(scvtrp);
-	std::string s1 = "Clyde";
-	std::string s2 = "Scarlet";
+	std::string s1 = "Dewie";
+	std::string s2 = "Norbert";
 	std::string s3 = "Fred";
 	std::string s4 = "Diego";
 
-	// Constructors
 	DiamondTrap	diamondtrap;
 	std::cout << std::endl;
 
-	// Repairs
+	std::cout << "Repairs\n";
 	diamondtrap.takeDamage(14);
 	diamondtrap.beRepaired(18);
 	std::cout << std::endl;
 
-	// New class attack until exhaustion
-	diamondtrap.attack(s2);
-	diamondtrap.attack(s2);
-	diamondtrap.attack(s2);
+	std::cout << "New class attack until exhaustion\n";
+	
+
+	DiamondTrap exhaust("exhaust");
+	for (int i = 0; i < 2000; i++)
+		exhaust.attack(s2);
+
 	std::cout << std::endl;
 
 	diamondtrap.guardGate();
 	diamondtrap.attack(s2);
 	std::cout << std::endl;
 
-	// New class personal method call
+	std::cout << "New class personal method call\n";
 	diamondtrap.highFivesGuys();
 	std::cout << std::endl;
 
 	diamondtrap.whoAmI();
 	std::cout << std::endl;
-	// Repair over max hp
+	std::cout << "Repair over max hp\n";
 	diamondtrap.beRepaired(18);
 
-	// Take damage
+	std::cout <<  "Take damage\n";
 	diamondtrap.takeDamage(50);
 
 	// Die

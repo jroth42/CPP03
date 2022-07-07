@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 15:34:50 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 17:07:52 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:05:34 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,6 @@ ScavTrap::~ScavTrap() {
 }
 
 void ScavTrap::guardGate() {
-    std::cout << "ScavTrap " + this->getName() + " is now in gatekeeper mode." << std::endl;
+    if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+        std::cout << "ScavTrap " + this->getName() + " is now in gatekeeper mode." << std::endl;
 }

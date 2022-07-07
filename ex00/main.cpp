@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 17:32:20 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:00:08 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int main() {
     ClapTrap copy(ClpTrp2);
     ClpTrp3 = copy;
 
-
     ClpTrp3.attack("Dewie");
     printinfo(ClpTrp3);
 
@@ -42,10 +41,10 @@ int main() {
     printinfo(ClpTrp2);
     ClpTrp2.beRepaired(3);
     
+    ClpTrp2.takeDamage(3);
     printinfo(ClpTrp2);
     printinfo(ClpTrp1);
     ClpTrp1.attack(s2);
-    ClpTrp2.takeDamage(3);
     ClpTrp1.attack(s2);
     ClpTrp1.attack(s2);
     ClpTrp1.attack(s2);
@@ -73,16 +72,13 @@ int main() {
     ClpTrp1.attack(s2);
     ClpTrp1.attack(s2);
     ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-    ClpTrp1.attack(s2);
-
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
+    ClpTrp1.beRepaired(1);
     printinfo(ClpTrp1);
     return 0;
 }

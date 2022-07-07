@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:58:18 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 17:26:32 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:05:53 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ FragTrap &FragTrap::operator=(const FragTrap &src)
 }
 
 void FragTrap::highFivesGuys() {
-    std::cout << "ClapTrap " << this->getName() << " wants a positive high five!" << std::endl;
+    if (this->getEnergyPoints() > 0 && this->getHitPoints() > 0)
+        std::cout << "ClapTrap " << this->getName() << " wants a positive high five!" << std::endl;
 }
 

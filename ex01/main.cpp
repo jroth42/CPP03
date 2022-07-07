@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 10:46:58 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 18:03:36 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void    printinfo(ScavTrap &scvtrp) {
     std::cout.width(15);  std::cout << std::left << scvtrp.getName() + " Info:" << std::endl;
     std::cout.width(15);  std::cout << std::right << "Hitpoints: " << scvtrp.getHitPoints() << std::endl;
     std::cout.width(15);  std::cout << std::right << "Enrgypnts: " << scvtrp.getEnergyPoints() << std::endl;
+    std::cout.width(15);  std::cout << std::right << "Attckpnts: " << scvtrp.getAttackPoints() << std::endl;
 }
 
 int main() {
@@ -35,6 +36,23 @@ int main() {
     printinfo(assign);
 
     ScvTrp.guardGate();
+    assign.guardGate();
+    zero.guardGate();
+    
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.attack(s1);
+    zero.beRepaired(1);
+    printinfo(zero);
 
     return 0;
 }

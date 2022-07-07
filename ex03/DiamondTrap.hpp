@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/23 15:35:14 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 10:36:51 by jroth            ###   ########.fr       */
+/*   Created: 2022/07/07 12:08:23 by jroth             #+#    #+#             */
+/*   Updated: 2022/07/07 15:58:21 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ScavTrap: public ClapTrap {
+class DiamondTrap: public ScavTrap, public FragTrap {
+    private:
+        std::string name;
     public:
-        ScavTrap();
-        ScavTrap(std::string& name);
-        ScavTrap(ScavTrap const &scvtrp);
-        ~ScavTrap();
-        ScavTrap &operator=(const ScavTrap &src);
-        void guardGate();
+        DiamondTrap();
+        DiamondTrap(std::string name);
+        DiamondTrap(DiamondTrap const &clptrp);
+        ~DiamondTrap();
+        DiamondTrap &operator=(const DiamondTrap &src);
+        void whoAmI();
 };

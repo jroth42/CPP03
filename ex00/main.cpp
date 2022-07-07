@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/06 21:05:12 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 17:32:20 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int main() {
     printinfo(ClpTrp3);
 
     ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
     printinfo(ClpTrp2);
     ClpTrp2.beRepaired(3);
     printinfo(ClpTrp2);
@@ -45,6 +46,43 @@ int main() {
     printinfo(ClpTrp1);
     ClpTrp1.attack(s2);
     ClpTrp2.takeDamage(3);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+    ClpTrp1.attack(s2);
+
     printinfo(ClpTrp1);
     return 0;
 }

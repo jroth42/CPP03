@@ -6,35 +6,38 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/23 17:58:18 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 17:26:32 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 17:02:22 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap() {
-    std::cout << "FragTrap constructor was called" << std::endl;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackPoints = 30;
+    std::cout << "FragTrap default constructor was called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string& name) {
-    this->setName(name);
-    this->setAttackPoints(30);
-    this->setEnergyPoints(100);
-    this->setHitPoints(100);
-    std::cout << "FragTrap constructor was called" << std::endl;
-}
 
-FragTrap::~FragTrap() {
-    std::cout << "FragTrap destructor for " << this->getName() << " was called" << std::endl;
+FragTrap::FragTrap(std::string name) {
+    this->name = name;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackPoints = 30;
+    std::cout << "FragTrap constructor was called for " << this->name << std::endl;
 }
-
 
 FragTrap::FragTrap(FragTrap const &clptrp) {
     this->setName(clptrp.getName());
 	this->setAttackPoints(clptrp.getAttackPoints());
     this->setEnergyPoints(clptrp.getEnergyPoints());
     this->setHitPoints(clptrp.getHitPoints());
-    std::cout << "FragTrap copy constructor was called" << std::endl;
+    std::cout << "FragTrap copy constructor was called for " << this->name << std::endl;
+}
+
+FragTrap::~FragTrap() {
+    std::cout << "FragTrap destructor for " << this->getName() << " was called" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &src)

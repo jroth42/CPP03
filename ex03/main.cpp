@@ -6,7 +6,7 @@
 /*   By: jroth <jroth@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 11:35:23 by jroth             #+#    #+#             */
-/*   Updated: 2022/07/07 18:14:19 by jroth            ###   ########.fr       */
+/*   Updated: 2022/07/07 20:10:35 by jroth            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void    printinfo(ClapTrap &clptrp) {
 int main() {
 	std::string s1 = "Dewie";
 	std::string s2 = "Norbert";
-	std::string s3 = "Fred";
+	std::string s3 = "Lars";
 	std::string s4 = "Diego";
 
 	DiamondTrap	diamondtrap;
@@ -37,8 +37,10 @@ int main() {
 	
 
 	DiamondTrap exhaust("exhaust");
-	for (int i = 0; i < 2000; i++)
+	for (int i = 0; i < 2000; i++) {
 		exhaust.attack(s2);
+		exhaust.beRepaired(1);
+	}
 
 	std::cout << std::endl;
 
